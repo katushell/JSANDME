@@ -43,5 +43,6 @@ let user = {
   
   let id3 = Symbol("id");
   user[id3] = 567;
-  
   console.log( user[id3] ); // мы можем получить доступ к данным по ключу-символу
+
+
