@@ -95,3 +95,68 @@ let calculator = {
 
 //    },
 // }
+
+// function foo(num) {
+//   console.log("foo: " + num );
+//   this.count++; //спойлер: не сработает!
+// }
+
+// foo count = 0;
+
+// for (i = 0; i < 6; i++){
+//   if (i > 2){
+//     foo(i)
+//   }
+// }
+
+// console.log(foo.count); //получится ноль)()()()()()
+
+
+function secondFoo(num) {
+  console.log("secondFoo: " + num);
+  data.count++;
+}
+
+let data = {
+  count: 0
+}
+
+let i ;
+for (i = 0; i < 10; i++){
+  if (i < 5){
+    secondFoo(i)
+  }
+}
+
+console.log(data.count) // всё получится
+//ЭТО ЛЕКСИЧЕСКАЯ ВИДИМОСТЬ
+
+function trueFoo(num) {
+  console.log("foo: " + num );
+  this.count++;
+}
+trueFoo.count = 0;
+let i;
+for (i = 0; i < 6; i++){
+  if (i > 2){
+    trueFoo.call(trueFoo , i )
+  }
+}
+
+console.log(foo.count); //всё получится!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
