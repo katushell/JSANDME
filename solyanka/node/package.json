@@ -1,0 +1,21 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "study",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "node.js"
+  ],
+  "author": "Ekaterina Ivasenko",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "nodemon": "^2.0.4",
+    "three.js": "^0.77.1"
+  }
+}
